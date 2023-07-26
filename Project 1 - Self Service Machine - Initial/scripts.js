@@ -64,3 +64,13 @@ var products = [
     }
 ];
  
+const SelfServiceMachine = {
+    data(){
+        return {
+            message: "Hello World2"
+
+        }
+    }
+
+ };
+ Vue.createApp(SelfServiceMachine).mount('#app');
