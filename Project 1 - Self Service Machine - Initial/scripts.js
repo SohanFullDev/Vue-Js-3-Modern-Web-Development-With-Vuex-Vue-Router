@@ -1,10 +1,10 @@
 var products = [
     {
         "photo": "img/big-mac.png",
-        "name": "Big Mac",
+        "name": "New Sandwich",
         "price": 5.99,
         "active": false,
-        "quantity": 1
+        "quantity": 5
     },
     {
         "photo": "img/mc-chicken.png",
@@ -60,7 +60,7 @@ var products = [
         "name": "Water",
         "price": 1.49,
         "active": false,
-        "quantity": 1
+        "quantity": 10
     }
 ];
  
