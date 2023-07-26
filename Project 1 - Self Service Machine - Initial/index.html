@@ -31,9 +31,9 @@
                         <span class="name">{{ product.name }}</span>
                         <span class="price">{{ product.price }}</span>
                         <div class="quantity-area">
-                            <button>-</button>
+                            <button @click.stop="product.quantity--">-</button>
                             <span class="quantity">{{ product.quantity }}</span>
-                            <button>+</button>
+                            <button @click.stop="product.quantity++">+</button>
                         </div>
                     </div>
                 </div>
