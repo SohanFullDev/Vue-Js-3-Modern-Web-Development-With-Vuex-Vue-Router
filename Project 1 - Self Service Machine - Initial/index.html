@@ -51,14 +51,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1x Big Mac</td>
-                            <td>5.99</td>
+                        <tr v-for="product in products">
+                            <td v-if="product.active">{{ product.quantity + 'x' + product.name }}</td>
+                            <td v-if="product.active">{{ product.quantity * product.price }}</td>
                         </tr>
                         
                         <tr>
                             <th>Total</th>
-                            <th>5.99</th>
+                            <th>0.00</th>
                         </tr>
                     </tbody>
                 </table>
