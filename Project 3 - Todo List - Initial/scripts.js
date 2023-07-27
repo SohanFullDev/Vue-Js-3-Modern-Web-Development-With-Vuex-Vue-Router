@@ -34,13 +34,23 @@ const todosApp = {
         };
         localStorage.setItem("todos", JSON.stringify(this.todos));
         //check inspect application
-        
+
        } else {
          alert("To-do text is required");
        }
     }
 
+   },
+   beforeCreate(){
+    console.log('Before create');
+   },
+   created(){
+    console.log('Created');
+   },
+   beforeUpdate(){
+    console.log('Before update');
    }
+   
 };
 
 Vue.createApp(todosApp).mount('#app');
