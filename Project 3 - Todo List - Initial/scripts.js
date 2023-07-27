@@ -1,4 +1,4 @@
-
+/*
 var todos = [
     {
         text: 'Learn HTML, CSS and Javascript',
@@ -12,12 +12,13 @@ var todos = [
     }
 
 
-];
+];*/
 
 const todosApp = {
    data(){
     return {
-        todos: window.todos,
+       // todos: window.todos,
+        todos: [],
         newTodo: {
             done: false
         }
