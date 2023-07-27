@@ -42,15 +42,14 @@ const todosApp = {
 
    },
    beforeCreate(){
-    console.log('Before create');
+   // console.log(this.todos);
+    console.log(this.newTodo);
    },
    created(){
-    console.log('Created');
-   },
-   beforeUpdate(){
-    console.log('Before update');
+  //  console.log(this.todos);
+    console.log(this.newTodo);
    }
-   
+
 };
 
 Vue.createApp(todosApp).mount('#app');
