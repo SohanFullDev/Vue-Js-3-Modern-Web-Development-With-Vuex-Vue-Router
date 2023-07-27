@@ -38,6 +38,10 @@ const todosApp = {
        } else {
          alert("To-do text is required");
        }
+    },
+    storeTodos(){
+        localStorage.setItem("todos", JSON.stringify(this.todos));
+        console.log('updated');
     }
 
    },
@@ -47,7 +51,8 @@ const todosApp = {
 
    },
    updated(){
-    localStorage.setItem("todos", JSON.stringify(this.todos));
+   // localStorage.setItem("todos", JSON.stringify(this.todos));
+   // console.log('updated');
 
    }
 
