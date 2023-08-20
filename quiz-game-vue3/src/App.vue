@@ -23,8 +23,18 @@ data(){
     question: undefined,
     incorrectAnswers: undefined,
     correctAnswer: undefined
+  }
+},
+
+computed: {
+  answers(){
+    var answers = this.incorrectAnswers;
+    answers.push(this.correctAnswer);
+   // answers.push("test");
+    return answers;
 
   }
+
 },
   
  created(){
