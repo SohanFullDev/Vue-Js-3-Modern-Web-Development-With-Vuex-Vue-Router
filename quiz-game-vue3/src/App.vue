@@ -28,9 +28,9 @@ data(){
 
 computed: {
   answers(){
-    var answers = this.incorrectAnswers;
+    var answers = JSON.parse(JSON.stringify(this.incorrectAnswers) );
     answers.push(this.correctAnswer);
-   // answers.push("test");
+    //answers.push("test");
     return answers;
 
   }
