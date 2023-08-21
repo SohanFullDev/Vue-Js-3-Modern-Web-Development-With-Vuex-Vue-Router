@@ -29,7 +29,9 @@ data(){
 computed: {
   answers(){
     var answers = JSON.parse(JSON.stringify(this.incorrectAnswers) );
-    answers.push(this.correctAnswer);
+   // answers.push(this.correctAnswer);
+    //answers.splice(0, 0, this.correctAnswer);
+    answers.splice(Math.round(Math.random() * answers.length) , 0, this.correctAnswer);
     //answers.push("test");
     return answers;
 
