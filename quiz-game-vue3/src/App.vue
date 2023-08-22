@@ -3,10 +3,15 @@
     <h1 v-html="this.question">
 
     </h1>
-    <input type="radio" name="options" value="True">
-    <label for="">True</label> <br>
-    <input type="radio" name="options" value="False">
-    <label for="">False</label> <br>
+   <template v-for="(answer, index) in this.answers" :key="index">
+      <input 
+      type="radio" 
+      name="options" 
+      value="answer">
+
+      <label v-html="answer"></label> <br>
+   </template>
+   
     <button class="send" type="button">Send</button>
 
   </div>
@@ -22,17 +27,16 @@ data(){
   return {
     question: undefined,
     incorrectAnswers: undefined,
-    correctAnswer: undefined
+    correctAnswer: undefined,
   }
 },
 
 computed: {
   answers(){
     var answers = JSON.parse(JSON.stringify(this.incorrectAnswers) );
-   // answers.push(this.correctAnswer);
-    //answers.splice(0, 0, this.correctAnswer);
+   
     answers.splice(Math.round(Math.random() * answers.length) , 0, this.correctAnswer);
-    //answers.push("test");
+  
     return answers;
 
   }
