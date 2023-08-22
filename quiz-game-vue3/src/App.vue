@@ -1,16 +1,22 @@
 <template>
   <div>
-    <h1 v-html="this.question">
 
-    </h1>
-   <template v-for="(answer, index) in this.answers" :key="index">
-      <input 
-      type="radio" 
-      name="options" 
-      value="answer">
+    <template v-if="this.answers">
 
-      <label v-html="answer"></label> <br>
-   </template>
+      <h1 v-html="this.question">
+
+      </h1>
+     <template v-for="(answer, index) in this.answers" v-bind:key="index">
+        <input 
+        type="radio" 
+        name="options" 
+        value="answer">
+  
+        <label v-html="answer"></label> <br>
+     </template>
+      
+    </template>
+
    
     <button class="send" type="button">Send</button>
 
